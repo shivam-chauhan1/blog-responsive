@@ -194,15 +194,21 @@ body {
   .blog-image {
     width: 100%;
   }
-  .blog-meta .author {
-    display: none;
+  .blog-meta time {
+    padding: 0.5rem;
   }
   .blog-meta .category {
     background-color: #ecf1f8;
-    padding: 0.1rem;
+    padding: 0.5rem;
     border-radius: var(--border-radius);
   }
   .blog-meta .category i {
+    display: none;
+  }
+  .blog-meta .author {
+    display: none;
+  }
+  .blog-divider {
     display: none;
   }
 }
