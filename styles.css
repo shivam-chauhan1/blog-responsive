@@ -52,7 +52,7 @@ body {
 
 .search-input {
   width: 100%;
-  padding: var(--spacing-sm) var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) 2.75rem;
   border: 1px solid var(--border-color);
   border-radius: 2rem;
   font-size: 1rem;
@@ -67,14 +67,15 @@ body {
 
 .search-button {
   position: absolute;
-  right: var(--spacing-sm);
+  left: var(--spacing-sm);
   top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
   color: var(--text-secondary);
   cursor: pointer;
-  padding: var(--spacing-xs);
+  padding: 0;
+  line-height: 0;
 }
 
 .main-content {
@@ -86,19 +87,22 @@ body {
 
 .blog-card {
   background-color: var(--card-background);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 
 .blog-image {
-  width: 100%;
-  height: 12rem;
+  width: 8rem;
+  height: auto;
   object-fit: cover;
 }
 
 .blog-content {
   padding: var(--spacing-md);
+  flex: 1;
 }
 
 .blog-meta {
@@ -108,6 +112,12 @@ body {
   font-size: 0.875rem;
   margin-bottom: var(--spacing-sm);
   flex-wrap: wrap;
+}
+
+.blog-divider {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: var(--spacing-sm) 0;
 }
 
 .blog-title {
@@ -142,4 +152,10 @@ body {
 
 .read-more:hover .arrow {
   transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+  .blog-meta {
+    font-size: 0.5rem;
+  }
 }
